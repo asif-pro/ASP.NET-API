@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Modernize js -->
     <script src="js/modernizr-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="API.js"></script>
 </head>
 
 <body>
@@ -135,6 +137,7 @@
                         <div class="heading-layout1">
                             <div class="item-title">
                                 <h3>All Citizens Data</h3>
+                                '<p id="msgtag1"></p>'
                             </div>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -167,7 +170,7 @@
                             </div>
                         </form>
                         <div class="table-responsive">
-                            <table class="table display data-table text-nowrap">
+                            <table id="allcitizens" class="table display data-table text-nowrap">
                                 <thead>
                                     <tr>
                                         <th>
@@ -175,7 +178,7 @@
                                                 
                                             </div>
                                         </th>
-                                        <th>Photo</th>
+                                        <!-- <th>Photo</th> -->
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Health Card</th>
@@ -191,7 +194,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                   <!--  <tr>
                                         <td>
                                            
                                         </td>
@@ -252,7 +255,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                     
                                 </tbody>
                             </table>
