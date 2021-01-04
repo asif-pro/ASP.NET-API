@@ -12,6 +12,54 @@ function GetURLParameter(sParam)
     }
 }
 
+$("#citizenBtn").click(function(){
+	addCitizen();
+});
+$("#citizenUpdateBtn").click(function(){
+	updateCitizen();
+});
+
+var addCitizen=function(){
+	
+	$.ajax({
+
+		url:"http://localhost:51369/api/patients",
+		method:"POST",
+		headers:{
+				Authorization:"Basic "+btoa("admin:123")
+			},
+		header:"Content-Type:application/json",
+		data:{
+			hospitalId:$("#hospitalID").val(),
+			name:$("#citizenName").val(),
+			sex:$("#gender option:selected").text(),
+			dob:$("#citizenDOB").val(),
+			healthCard:$("#healthCardID").val(),
+			bloodGroup:$("#citizenBloodGroup option:selected").text(),
+			bornDisease:$("#bornDiseases").val(),
+			birthMark:$("#birthMark").val(),
+			email:$("#email").val(),
+			phone:$("#phone").val()	
+		},
+		complete:function(xmlhttp,status){
+			if (xmlhttp.status==201) {
+
+				/*$("#msgtag2").html("Citizen Added");*/
+				window.location.href='all-citizens.html';
+
+			}
+			else
+			{
+				$("#msgtag2").html(xmlhttp.status+":"+xmlhttp.statusText);
+			
+			}
+		}
+	})
+}
+
+
+
+
 function deletePatient(id, name) {
 	if(confirm("Are you sure to remove the patient "+name+" ?")) {
 		$.ajax({
@@ -108,4 +156,43 @@ function executeSinglePatient() {
 			}
 		});
 	}
+}
+
+var updateCitizen=function(){
+	
+	$.ajax({
+
+		url:"http://localhost:51369/api/patients/"+patientId,
+		method:"PUT",
+		header:"Content-Type:application/json",
+		headers:{
+				Authorization:"Basic "+btoa("admin:123")
+			},
+		data:{
+
+			hospitalId:$("#hospitalId").val(),
+			name:$("#name").val(),
+			sex:$("#gender option:selected").text(),
+			dob:$("#dob").val(),
+			healthCard:$("#healthCard").val(),
+			bloodGroup:$("#bloodGroup option:selected").text(),
+			bornDisease:$("#bornDiseases").val(),
+			birthMark:$("#birthMark").val(),
+			email:$("#eMail").val(),
+			phone:$("#phone").val()	
+		},
+		complete:function(xmlhttp,status){
+			if (xmlhttp.status==200) {
+
+				/*$("#msgtag2").html("Citizen Added");*/
+				window.location.href='all-citizens.html';
+
+			}
+			else
+			{
+				$("#msgtag3").html(xmlhttp.status+":"+xmlhttp.statusText);
+			
+			}
+		}
+	})
 }
