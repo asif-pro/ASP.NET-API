@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7030548b0f774ea0bd6efad0f4aeacff" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="CCHCMS_API_DBModel.Doctor" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCHCMS_API_DBModel.Patient" Width="1.5" PointX="0.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCHCMS_API_DBModel.Prescription" Width="1.5" PointX="3.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCHCMS_API_DBModel.UserInformation" Width="1.5" PointX="5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CCHCMS_API_DBModel.User" Width="1.5" PointX="2.625" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="CCHCMS_API_DBModel.FK_Prescriptions_Prescriptions_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="CCHCMS_API_DBModel.FK_Prescriptions_Prescriptions_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="CCHCMS_API_DBModel.FK_UserInformations_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
