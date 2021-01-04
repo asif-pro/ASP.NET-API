@@ -18,7 +18,7 @@ var loadPage=function(){
 
 				for (var i = 0; i < data.length; i++) {
 					
-					str1+="<tr><td>"+data[i].id+"</td><td>"+data[i].name+"</td><td>"+data[i].healthCard+"</td><td>"+data[i].hospitslId+"</td><td>"+data[i].dob+"</td><td>"+data[i].sex+"</td><td>"+data[i].bloodGroup+"</td><td>"+data[i].bornDisease+"</td><td>"+data[i].birthMark+"</td><td>"+data[i].phone+"</td><td>"+data[i].email+"</td><td><button>Update</button><button>Delete</button></td></tr>";
+					str1+="<tr><td>"+data[i].id+"</td><td>"+data[i].name+"</td><td>"+data[i].healthCard+"</td><td>"+data[i].hospitslId+"</td><td>"+data[i].dob+"</td><td>"+data[i].sex+"</td><td>"+data[i].bloodGroup+"</td><td>"+data[i].bornDisease+"</td><td>"+data[i].birthMark+"</td><td>"+data[i].phone+"</td><td>"+data[i].email+"</td><td><button>Update</button><button>BirthCertificate</button><button>Delete</button></td></tr>";
 				}
 
 				$("#allcitizens>tbody").html(str1);
