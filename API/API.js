@@ -109,7 +109,7 @@ function executeAllPatients() {
 					<td>"+data[i].phone+"</td>\
 					<td>"+data[i].email+"</td>\
 					<td><button class=\"btn-fill-lg btn-gradient-yellow btn-hover-bluedark\" onclick=\"window.location.href = 'update-citizen.html?id="+data[i].id+"'\">Update</button>\
-					<button class=\"btn-fill-lg bg-blue-dark btn-hover-yellow\">BirthCertificate</button>\
+					<button class=\"btn-fill-lg bg-blue-dark btn-hover-yellow\" onclick=\"window.location.href = 'update-citizen.html?id="+data[i].id+"'\">BirthCertificate</button>\
 					<button class=\"btn-fill-lg btn-gradient-yellow btn-hover-bluedark\" onclick=\"deletePatient("+data[i].id+", '"+data[i].name+"')\">Delete</button></td>\
 					</tr>";
 				}
