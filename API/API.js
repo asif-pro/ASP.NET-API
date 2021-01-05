@@ -198,21 +198,7 @@ var updateCitizen=function(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(function(){
+function doValidation(){
 
 	$("#hID").hide();
 	$("#cName").hide();
@@ -236,15 +222,6 @@ $(function(){
 	var err_emailmsg = false;
 	var err_phoneerr = false;
 	var err_gendererr = false;
-
-
-
-
-
-
-
-
-
 
 
 
