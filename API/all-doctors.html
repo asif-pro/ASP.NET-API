@@ -31,7 +31,7 @@
     <!-- Modernize js -->
     <script src="js/modernizr-3.6.0.min.js"></script>
     <script type="text/javascript" src="jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="API.js"></script>
+    <script type="text/javascript" src="doctors.js"></script>
 </head>
 
 <body>
@@ -169,7 +169,7 @@
                             </div>
                         </form>
                         <div class="table-responsive">
-                            <table class="table display data-table text-nowrap">
+                            <table id="allDoctors" class="table display data-table text-nowrap">
                                 <thead>
                                     <tr>
                                         <!-- <th>Photo</th> -->
@@ -273,6 +273,9 @@
     <script src="js/jquery.dataTables.min.js"></script>
     <!-- Custom Js -->
     <script src="js/main.js"></script>
+     <script type="text/javascript">
+        executeAllDoctors();
+    </script>
 
 </body>
 

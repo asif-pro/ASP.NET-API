@@ -196,3 +196,205 @@ var updateCitizen=function(){
 		}
 	})
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(function(){
+
+	$("#hID").hide();
+	$("#cName").hide();
+	$("#dOB").hide();
+	$("#hCIN").hide();
+	$("#bG").hide();
+	$("#bDiseases").hide();
+	$("#bM").hide();
+	$("#emailmsg").hide();
+	$("#phoneerr").hide();
+	$("#gendererr").hide();
+
+
+	var err_hID = false;
+	var err_cName = false;
+	var err_dOB = false;
+	var err_hCIN = false;
+	var err_bG = false;
+	var err_bDiseases = false;
+	var err_bM = false;
+	var err_emailmsg = false;
+	var err_phoneerr = false;
+	var err_gendererr = false;
+
+
+
+
+
+
+
+
+
+
+
+
+	$("#hospitalID").focusout(function(){
+
+		check_hospitalID();
+	});
+
+	$("#citizenName").focusout(function(){
+
+		check_citizenName();
+	});
+
+	$("#gender").focusout(function(){
+
+		check_gender();
+	});
+
+	$("#citizenDOB").focusout(function(){
+
+		check_citizenDOB();
+	});
+
+	$("#healthCardID").focusout(function(){
+
+		check_healthCardID();
+	});
+
+	$("#citizenBloodGroup").focusout(function(){
+
+		check_citizenBloodGroup();
+	});
+
+	$("#bornDiseases").focusout(function(){
+
+		check_bornDiseases();
+	});
+
+	$("#birthMark").focusout(function(){
+
+		check_birthMark();
+	});
+
+	$("#email").focusout(function(){
+
+		check_email();
+	});
+
+	$("#phone").focusout(function(){
+
+		check_phone();
+	});
+
+
+/*function check_hospitalID(){
+
+	
+	var hID = $("#hospitalID").val();
+	if ( hID !== ''){
+
+		$("#hID").hide();
+	}
+	else{
+
+		$("#hID").html("Can not be empty");
+		$("#hID").show();
+		var err_hID = true;
+	}
+}*/
+
+function check_healthCardID(){
+
+	
+	var hCID = $("#healthCardID").val();
+	if ( hCID !== ''){
+
+		$("#hCIN").hide();
+	}
+	else{
+
+		$("#hCIN").html("Can not be empty");
+		$("#hCIN").show();
+		var var err_hCIN = true;
+	}
+}
+
+function check_citizenName(){
+
+	var cNamePattern = /^[a-zA-z]*$/;
+	var cName = $("#citizenName").val();
+	if (cNamePattern.test(cName) && cName !== ''){
+
+		$("#cName").hide();
+	}
+	else{
+
+		$("#cName").html("Should contain only Alphabets");
+		$("#cName").show();
+		var err_cName = true;
+	}
+}
+
+function check_bornDiseases(){
+
+	
+	var bonD = $("#bornDiseases").val();
+	if ( bonD !== ''){
+
+		$("#bDiseases").hide();
+	}
+	else{
+
+		$("#bDiseases").html("Can not be empty");
+		$("#bDiseases").show();
+		var var err_bDiseases = true;
+	}
+}
+
+
+function check_birthMark(){
+
+	
+	var biMark = $("#birthMark").val();
+	if ( biMark !== ''){
+
+		$("#bM").hide();
+	}
+	else{
+
+		$("#bM").html("Can not be empty");
+		$("#bM").show();
+		 var err_bM = true;
+	}
+}
+
+function check_citizenName(){
+
+	var cNamePattern = /^[a-zA-z]*$/;
+	var cName = $("#citizenName").val();
+	if (cNamePattern.test(cName) && cName !== ''){
+
+		$("#cName").hide();
+	}
+	else{
+
+		$("#cName").html("Should contain only Alphabets");
+		$("#cName").show();
+		var err_cName = true;
+	}
+}
+
+
+});
