@@ -380,21 +380,45 @@ function check_birthMark(){
 	}
 }
 
-function check_citizenName(){
+function check_email(){
 
-	var cNamePattern = /^[a-zA-z]*$/;
-	var cName = $("#citizenName").val();
-	if (cNamePattern.test(cName) && cName !== ''){
+	var cEmailPattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	var cEmail = $("#email").val();
+	if (cEmailPattern.test(cEmail) && cEmail !== ''){
 
-		$("#cName").hide();
+		$("#emailmsg").hide();
 	}
 	else{
 
-		$("#cName").html("Should contain only Alphabets");
-		$("#cName").show();
-		var err_cName = true;
+		$("#emailmsg").html("Should contain only Alphabets");
+		$("#emailmsg").show();
+		var err_emailmsg = true;
 	}
 }
 
+function check_gender(){}
+function check_citizenDOB(){}
+function check_citizenBloodGroup(){}
+function check_phone(){}
+
+check_hospitalID();
+check_citizenName();
+check_gender();
+check_citizenDOB();
+check_healthCardID();
+check_citizenBloodGroup();
+check_bornDiseases();
+check_birthMark();
+check_email();
+check_phone();
+
+if(var err_hID === false && var err_cName === false && var err_dOB === false && var err_hCIN === false && var err_bG === false && var err_bDiseases === false && var err_bM === false && var err_emailmsg === false && var err_phoneerr === false && var err_gendererr === false && )
+{
+
+}
+else
+{
+	alert("Please Fillup the from correctly");
+}
 
 });
